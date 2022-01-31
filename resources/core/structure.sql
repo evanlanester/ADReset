@@ -50,11 +50,13 @@ setting VARCHAR(64) NOT NULL,
 settingvalue TEXT NOT NULL);
 
 #Create secretquestions table
+SET FOREIGN_KEY_CHECKS = 0;
 DROP TABLE IF EXISTS `secretquestions`;
 CREATE TABLE IF NOT EXISTS `secretquestions`(
 id INT UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,
 secretquestion TEXT NOT NULL,
 enabled BIT NOT NULL);
+SET FOREIGN_KEY_CHECKS = 1;
 
 #Create usersecretquestions table
 DROP TABLE IF EXISTS `usersecretquestions`;
